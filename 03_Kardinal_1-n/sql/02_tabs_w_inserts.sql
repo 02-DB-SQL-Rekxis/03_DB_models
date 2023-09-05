@@ -1,8 +1,8 @@
 -- 03. Tabellen verbunden + INSERTS
 
 -- Vorbereitungen
-DROP DATABASE IF EXISTS mydb;
-CREATE DATABASE IF NOT EXISTS mydb;
+DROP TABLE IF EXISTS mydb.kittens;
+DROP TABLE IF EXISTS mydb.cats;
 
 -- MT: cats
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
@@ -47,6 +47,3 @@ INSERT INTO `mydb`.`kittens` (`id`, `kitten_name`, `fur_color`, `cats_id`) VALUE
 
 -- DT: Inhalte
 SELECT * FROM mydb.kittens;
-
-
-
