@@ -20,14 +20,14 @@ CREATE TABLE IF NOT EXISTS `mydb`.`purchases` (
   `servants_id` INT NOT NULL,
   `products_id` INT NOT NULL,
   PRIMARY KEY (`servants_id`, `products_id`),
-  INDEX `fk_servants_has_products_products1_idx` (`products_id` ASC),
-  INDEX `fk_servants_has_products_servants_idx` (`servants_id` ASC),
-  CONSTRAINT `fk_servants_has_products_servants`
+  INDEX `fk_purchases_products_idx` (`products_id` ASC) INVISIBLE,
+  INDEX `fk_purchases_servants_idx` (`servants_id` ASC) VISIBLE,
+  CONSTRAINT `fk_purchases_servants`
     FOREIGN KEY (`servants_id`)
     REFERENCES `mydb`.`servants` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_servants_has_products_products1`
+  CONSTRAINT `fk_purchases_products`
     FOREIGN KEY (`products_id`)
     REFERENCES `mydb`.`products` (`id`)
     ON DELETE NO ACTION
