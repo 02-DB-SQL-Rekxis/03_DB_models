@@ -1,6 +1,9 @@
 -- Vorbereitungen
+DROP DATABASE IF EXISTS mydb;
+CREATE DATABASE IF NOT EXISTS mydb;
+
 DROP TABLE IF EXISTS mydb.servants;
-DROP TABLE IF EXISTS mydb.cats;
+DROP TABLE IF EXISTS mydb.cats; 
 
 -- Mastertabelle (MT)
 CREATE TABLE IF NOT EXISTS `mydb`.`cats` (
