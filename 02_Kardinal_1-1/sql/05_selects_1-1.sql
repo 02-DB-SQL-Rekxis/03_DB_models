@@ -26,3 +26,12 @@ ON mydb.cats.id = mydb.servants.cats_id;
 -- Wer dient Grizabella?
 -- Wem dient Ingo?
 
+SELECT servant_name Diener, cat_name Katze  FROM mydb.cats 
+INNER JOIN mydb.servants
+ON mydb.cats.id = mydb.servants.cats_id
+AND cat_name LIKE "Gri%";
+
+SELECT servant_name Diener, cat_name Katze FROM mydb.cats 
+INNER JOIN mydb.servants
+ON mydb.cats.id = mydb.servants.cats_id
+AND servant_name = "Ingo";
