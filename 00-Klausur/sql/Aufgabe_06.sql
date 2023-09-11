@@ -1,16 +1,8 @@
--- Vorbereitung
-DROP DATABASE IF EXISTS `mydb`;
-CREATE DATABASE IF NOT EXISTS `mydb`;
-
--- Addressbook
-CREATE TABLE IF NOT EXISTS `mydb`.`addressbook` (
+CREATE TABLE IF NOT EXISTS `mydb`.`productlist` (
   `ID` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `vorname` VARCHAR(45) NOT NULL,
-  `plz` INT NOT NULL,
-  `ort` VARCHAR(45) NOT NULL,
+  `product` VARCHAR(45) NOT NULL,
+  `category` VARCHAR(45) NOT NULL,
+  `price` DECIMAL(6,2) NOT NULL,
+  `id_stock` INT NOT NULL,
   PRIMARY KEY (`ID`))
 ENGINE = InnoDB;
-
--- Struktur
-DESCRIBE `mydb`.`addressbook`;
